@@ -21,7 +21,6 @@ class Smell1AlmostBestTest {
         int[] expected = {8, 16, 32};
         assertArrayEquals(expected, result);
     }
-
     @Test
     @DisplayName("Positive base raised to Exponent Zero")
     void PositiveBaseToExponentZero() {
@@ -35,7 +34,6 @@ class Smell1AlmostBestTest {
         }
         int[] expected = {1, 1, 1};
         assertArrayEquals(expected, result);
-
     }
     @Test
     @DisplayName("base one raise to greater power should return one")
@@ -50,5 +48,4 @@ class Smell1AlmostBestTest {
         int[] expected = {1, 1, 1};
         assertArrayEquals(expected, result);
     }
-
 }
