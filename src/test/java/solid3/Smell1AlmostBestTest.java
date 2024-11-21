@@ -1,6 +1,8 @@
 package solid3;
 import org.junit.jupiter.api.Test;
 
+import java.lang.*;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -26,5 +28,23 @@ class Smell1AlmostBestTest {
         }
         assertArrayEquals(expectedVal,result);
     }
+
+    @Test
+    @DisplayName("Raising Zero to a negative number")
+    public void baseZeroNegativeExponent(){
+        int expected = (int)Math.pow(0,-1);
+        int base = 0;
+        int[] exponents = {2,3,4};
+
+        int[] expectedVal = {expected,expected,expected};
+        int[] result = new int[expectedVal.length];
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+
+    
 
 }
