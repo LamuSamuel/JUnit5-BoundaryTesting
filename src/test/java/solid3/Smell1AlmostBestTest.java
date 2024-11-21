@@ -48,4 +48,18 @@ class Smell1AlmostBestTest {
         int[] expected = {1, 1, 1};
         assertArrayEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("Negative base with odd exponent should return Negative result")
+    void NegativeBaseWithOddExponentIsnegative() {
+        Smell1AlmostBest power = new Smell1AlmostBest();
+        int[] exponents = {1, 3, 5};
+        int base = -2;
+        int[] result = new int[exponents.length];
+        for (int i = 0; i < exponents.length; i++) {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        int[] expected = {-2,-8,-32};
+        assertArrayEquals(expected, result);
+    }
 }
