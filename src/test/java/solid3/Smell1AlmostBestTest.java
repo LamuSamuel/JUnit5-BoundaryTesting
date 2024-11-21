@@ -9,7 +9,7 @@ class Smell1AlmostBestTest {
 
     @Test
     @DisplayName("Positive base raised to Positive Exponent")
-    void PositiveBaseToPositivePower() {
+    void PositiveBaseToPositivePowerIsPositive() {
         Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {3, 4, 5};
         int base = 2;
@@ -23,7 +23,7 @@ class Smell1AlmostBestTest {
     }
     @Test
     @DisplayName("Positive base raised to Exponent Zero")
-    void PositiveBaseToExponentZero() {
+    void PositiveBaseToExponentZeroIsOne() {
         Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {0, 0, 0};
         int base = 2;
@@ -37,7 +37,7 @@ class Smell1AlmostBestTest {
     }
     @Test
     @DisplayName("base one raise to greater power should return one")
-    void baseOneRaisesToGreaterPower() {
+    void baseOneRaisesToGreaterPowerIsOne() {
         Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {99, 19999,199999};
         int base = 1;
@@ -62,4 +62,33 @@ class Smell1AlmostBestTest {
         int[] expected = {-2,-8,-32};
         assertArrayEquals(expected, result);
     }
+    @Test
+    @DisplayName("Negative base with even Exponent shoudl return Positive value")
+    void NegativeBaseWithEvenExponentShouldReturnPositiveValue() {
+        Smell1AlmostBest power = new Smell1AlmostBest();
+        int[] exponents = {2, 4, 6};
+        int base = -2;
+        int[] result = new int[exponents.length];
+        for (int i = 0; i < exponents.length; i++) {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        int[] expected = {4,16,64};
+        assertArrayEquals(expected, result);
+
+    }
+    @Test
+    @DisplayName("Negative base with zero exponent should return 1")
+    void NegativeBaseWithZeroExponentShouldReturnOne() {
+        Smell1AlmostBest power = new Smell1AlmostBest();
+        int[] exponents = {0, 0, 0};
+        int base = -10;
+        int[] result = new int[exponents.length];
+        for (int i = 0; i < exponents.length; i++) {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        int[] expected = {1,1,1};
+        assertArrayEquals(expected, result);
+
+    }
+    
 }
