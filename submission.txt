@@ -1,9 +1,1 @@
-
-method name : BaseZeroPositiveExponent
-hash  : 209266296a9cc81902d3f5365aa6d0165a6b96d4
-
-method name : baseZeroNegativeExponent
-hash  : 695b5f893c99433ad0aa2108a78c169830fa85cc
-
-method name : baseOnePositivePower
-hash : cb01238f75e90f570bd95afb5c6919fe226821ac
+Submissions
