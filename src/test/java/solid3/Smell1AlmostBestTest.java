@@ -173,6 +173,22 @@ class Smell1AlmostBestTest {
         }
         assertArrayEquals(expectedVal,result);
     }
+    
+    @Test
+    @DisplayName("Positive Number raised to a negative exponent")
+    public void positiveBaseNegativeExponent(){
+        int[] exponents = {-2,-3,-4};
+        int[] expectedVal = {(int) 0.25,(int) 0.125,(int) 0.0625};
+        int[] result = new int[expectedVal.length];
+        int base = 2;
+
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+
+    }
 
     
 
