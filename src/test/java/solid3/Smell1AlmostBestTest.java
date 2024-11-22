@@ -159,7 +159,6 @@ class Smell1AlmostBestTest {
         int[] expectedVal = {1,1,1};
         int[] result = new int[expectedVal.length];
         int base = 0;
-
         for(int i =0;i<expectedVal.length;i++)
         {
             result[i] = power.toPower(base, exponents[i]);
@@ -174,7 +173,6 @@ class Smell1AlmostBestTest {
         int[] expectedVal = {(int) 0.25,(int) 0.125,(int) 0.0625};
         int[] result = new int[expectedVal.length];
         int base = 2;
-
         for(int i =0;i<expectedVal.length;i++)
         {
             result[i] = power.toPower(base, exponents[i]);
@@ -182,18 +180,16 @@ class Smell1AlmostBestTest {
         assertArrayEquals(expectedVal,result);
 
     }
-
     @Test
     @DisplayName("Raising Zero to Zero")
     public void zeroRaisedToZero(){
-        int[] exponents = {0,0,0};
+        int[] exponentsList = {0,0,0,0};
         int expected = (int)Math.pow(0,0);
-        int[] expectedVal = {expected,expected,expected};
+        int[] expectedVal = {expected,expected,expected,expected};
         int[] result = new int[expectedVal.length];
         int base = 0;
-
         for(int i =0;i<expectedVal.length;i++){
-            result[i] = power.toPower(base, exponents[i]);
+            result[i] = power.toPower(base, exponentsList[i]);
         }
         assertArrayEquals(expectedVal,result);
     }
