@@ -190,7 +190,21 @@ class Smell1AlmostBestTest {
 
     }
 
-    
+    @Test
+    @DisplayName("Rasing Zero to Zero")
+    public void zeroRaisedToZero(){
+        int[] exponents = {0,0,0};
+        int expected = (int)Math.pow(0,0);
+        int[] expectedVal = {expected,expected,expected};
+        int[] result = new int[expectedVal.length];
+        int base = 0;
+
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
 
 
 }
