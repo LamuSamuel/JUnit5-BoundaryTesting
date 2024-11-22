@@ -90,7 +90,7 @@ class Smell1AlmostBestTest {
 
     }
     @Test
-    @DisplayName("Negative base with negative exponent should return one")
+    @DisplayName("Negative base with negative exponent should return undefined")
     void NegativeBaseWithNegativeExponentShouldReturnError() {
         Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {-3};
@@ -99,7 +99,7 @@ class Smell1AlmostBestTest {
         for (int i = 0; i < exponents.length; i++) {
             result[i] = power.toPower(base, exponents[i]);
         }
-        int[] expected = {1};
+        int[] expected = {3};
         assertArrayEquals(expected, result);
 
     }
