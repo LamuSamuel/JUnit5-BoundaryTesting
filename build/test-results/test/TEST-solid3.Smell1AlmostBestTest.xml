@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="solid3.Smell1AlmostBestTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-11-22T00:51:39" hostname="samuels-mbp.dhcp.asu.edu" time="0.013">
+  <properties/>
+  <testcase name="base one raise to greater power should return one" classname="solid3.Smell1AlmostBestTest" time="0.009"/>
+  <testcase name="Negative base with odd exponent should return Negative result" classname="solid3.Smell1AlmostBestTest" time="0.001"/>
+  <testcase name="Negative base with even Exponent shoudl return Positive value" classname="solid3.Smell1AlmostBestTest" time="0.0"/>
+  <testcase name="Negative base with zero exponent should return 1" classname="solid3.Smell1AlmostBestTest" time="0.0"/>
+  <testcase name="Negative base with negative exponent should return one" classname="solid3.Smell1AlmostBestTest" time="0.0"/>
+  <testcase name="Positive base raised to Exponent Zero" classname="solid3.Smell1AlmostBestTest" time="0.0"/>
+  <testcase name="Positive base raised to Positive Exponent" classname="solid3.Smell1AlmostBestTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

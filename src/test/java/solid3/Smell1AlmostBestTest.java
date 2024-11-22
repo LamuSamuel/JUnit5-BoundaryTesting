@@ -30,7 +30,6 @@ class Smell1AlmostBestTest {
         int[] result = new int[exponents.length];
         for (int i = 0; i < exponents.length; i++) {
             result[i] = power.toPower(base, exponents[i]);
-
         }
         int[] expected = {1, 1, 1};
         assertArrayEquals(expected, result);
@@ -90,5 +89,19 @@ class Smell1AlmostBestTest {
         assertArrayEquals(expected, result);
 
     }
-    
+    @Test
+    @DisplayName("Negative base with negative exponent should return one")
+    void NegativeBaseWithNegativeExponentShouldReturnError() {
+        Smell1AlmostBest power = new Smell1AlmostBest();
+        int[] exponents = {-3};
+        int base = -7937;
+        int[] result = new int[exponents.length];
+        for (int i = 0; i < exponents.length; i++) {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        int[] expected = {1};
+        assertArrayEquals(expected, result);
+
+    }
+
 }
