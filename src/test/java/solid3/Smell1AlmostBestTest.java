@@ -66,7 +66,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Positive base raised to Positive Exponent")
     void PositiveBaseToPositivePower() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {3, 4, 5};
         int base = 2;
         int[] result = new int[exponents.length];
@@ -80,7 +79,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Positive base raised to Exponent Zero")
     void PositiveBaseToExponentZero() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {0, 0, 0};
         int base = 2;
         int[] result = new int[exponents.length];
@@ -94,7 +92,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("base one raise to greater power should return one")
     void baseOneRaisesToGreaterPower() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {99, 19999,199999};
         int base = 1;
         int[] result = new int[exponents.length];
@@ -107,7 +104,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Negative base with odd exponent should return Negative result")
     void NegativeBaseWithOddExponentIsnegative() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {1, 3, 5};
         int base = -2;
         int[] result = new int[exponents.length];
@@ -120,7 +116,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Negative base with even Exponent shoudl return Positive value")
     void NegativeBaseWithEvenExponentShouldReturnPositiveValue() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {2, 4, 6};
         int base = -2;
         int[] result = new int[exponents.length];
@@ -134,7 +129,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Negative base with zero exponent should return 1")
     void NegativeBaseWithZeroExponentShouldReturnOne() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {0, 0, 0};
         int base = -10;
         int[] result = new int[exponents.length];
@@ -148,7 +142,6 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Negative base with negative exponent should return undefined")
     void NegativeBaseWithNegativeExponentShouldReturnError() {
-        Smell1AlmostBest power = new Smell1AlmostBest();
         int[] exponents = {-3};
         int base = -2;
         int[] result = new int[exponents.length];
@@ -191,7 +184,7 @@ class Smell1AlmostBestTest {
     }
 
     @Test
-    @DisplayName("Rasing Zero to Zero")
+    @DisplayName("Raising Zero to Zero")
     public void zeroRaisedToZero(){
         int[] exponents = {0,0,0};
         int expected = (int)Math.pow(0,0);
@@ -199,12 +192,9 @@ class Smell1AlmostBestTest {
         int[] result = new int[expectedVal.length];
         int base = 0;
 
-        for(int i =0;i<expectedVal.length;i++)
-        {
+        for(int i =0;i<expectedVal.length;i++){
             result[i] = power.toPower(base, exponents[i]);
         }
         assertArrayEquals(expectedVal,result);
     }
-
-
 }
