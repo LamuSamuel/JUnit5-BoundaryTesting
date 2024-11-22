@@ -63,8 +63,6 @@ class Smell1AlmostBestTest {
         assertArrayEquals(expectedVal,result);
     }
 
-class Smell1AlmostBestTest {
-
     @Test
     @DisplayName("Positive base raised to Positive Exponent")
     void PositiveBaseToPositivePower() {
