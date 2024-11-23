@@ -7,7 +7,6 @@ import java.lang.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
 import org.junit.jupiter.api.DisplayName;
 
 
@@ -148,7 +147,7 @@ class Smell1AlmostBestTest {
         for (int i = 0; i < exponents.length; i++) {
             result[i] = power.toPower(base, exponents[i]);
         }
-        int[] expected = {0};
+        int[] expected = {-1/8};
         assertArrayEquals(expected, result);
     }
 
