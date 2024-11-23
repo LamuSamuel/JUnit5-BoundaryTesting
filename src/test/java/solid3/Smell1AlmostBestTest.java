@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import java.lang.*;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import org.junit.jupiter.api.DisplayName;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 
 
 class Smell1AlmostBestTest {
@@ -192,4 +193,17 @@ class Smell1AlmostBestTest {
         }
         assertArrayEquals(expectedVal,result);
     }
+    @Test
+    void testMainWithValidArgs() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        String[] args = {"2", "3", "4", "5"};
+        Smell1AlmostBest.main(args);
+        String output = outContent.toString();
+        assertTrue(output.contains("The 3rd power of 2 is 8"));
+        assertTrue(output.contains("The 4th power of 2 is 16"));
+        assertTrue(output.contains("The 5th power of 2 is 32"));
+        assertTrue(output.contains("Completed 4 iterations"));
+    }
+
 }
