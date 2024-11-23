@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.lang.*;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -206,4 +208,16 @@ class Smell1AlmostBestTest {
         assertTrue(output.contains("Completed 4 iterations"));
     }
 
+    @Test
+    public void stringsAsInput(){
+        ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
+        PrintStream outStream = new PrintStream(byteArray);
+        System.setOut(outStream);
+
+        String[] str = {"one", "two", "three"};
+        
+        Exception exception = assertThrows(NumberFormatException.class,() -> Smell1AlmostBest.main(str));
+        assertEquals(NumberFormatException.class, exception.getClass());
+    
+    }
 }
