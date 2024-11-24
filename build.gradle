@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id 'pmd'
 }
 
 group = 'solid3'
@@ -25,5 +26,9 @@ jacocoTestReport {
         xml.required = false
         csv.required = false
         html.outputLocation = file('part1_coverage')
+    }
+
+    pmd{
+        ruleSets = ["quickstart.xml"]
     }
 }
