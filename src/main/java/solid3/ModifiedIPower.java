@@ -6,7 +6,6 @@ import java.util.HashMap;
 public interface ModifiedIPower {
     int toPower(int n, int pow);
 }
-
 class ModifiedPowerSimple implements ModifiedIPower {
     @Override
     public int toPower(int n, int pow) {
