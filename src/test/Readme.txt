@@ -151,3 +151,129 @@ Failure cases (Negative cases) are :
                 so any negative base (-2) raised to 2, 4, 6 should return 4,16,64.
 
 
+For the commits by dsalda11,
+
+The Boundary cases are : 
+
+    @Test
+    @DisplayName("Raising Zero to a positive")
+    public void BaseZeroPositiveExponent(){
+
+        int[] exponents = {2,3,4};
+        int[] expectedVal = {0,0,0};
+        int[] result = new int[expectedVal.length];
+        int base = 0;
+
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+This is a boundary test case as the base is zero which is a special case as zero raised to any positive number
+returns 0. This test case passes successfully.
+
+    @Test
+    @DisplayName("Raising Zero to Zero")
+    public void zeroRaisedToZero(){
+        int[] exponentsList = {0,0,0,0};
+        int expected = (int)Math.pow(0,0);
+        int[] expectedVal = {expected,expected,expected,expected};
+        int[] result = new int[expectedVal.length];
+        int base = 0;
+        for(int i =0;i<expectedVal.length;i++){
+            result[i] = power.toPower(base, exponentsList[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+
+This is a boundary test case as the base is zero which is a special case as zero raised to zero should return 
+zero. This test checks if a zero raised to zero always returns 1.
+
+    @Test
+    @DisplayName("Raising One to a Positive Number")
+    public void baseOnePositivePower(){
+
+        int[] exponents = {3,4,5};
+        int[] expectedVal = {1,1,1};
+        int[] result = new int[expectedVal.length];
+        int base = 1;
+
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+This test case checks if a 1 raised to a positive number returns 1 or not. This test case passes as the function
+returns 1.
+
+
+    @Test
+    @DisplayName("Raising one to a negative power")
+    public void baseOneNegativeExponent(){
+        int[] exponents = {-2,-3,-4};
+        int[] expectedVal = {1,1,1};
+        int[] result = new int[expectedVal.length];
+        int base = 0;
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+
+This test case is a special boundary case that tests 1 raised to a negative number returns 1 or not. This test case
+passes as the function returns 1.
+
+Negative Cases :
+
+    @Test
+    @DisplayName("Raising Zero to a negative number")
+    public void baseZeroNegativeExponent(){
+        int expected = (int)Math.pow(0,-1);
+        int base = 0;
+        int[] exponents = {2,3,4};
+
+        int[] expectedVal = {expected,expected,expected};
+        int[] result = new int[expectedVal.length];
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+This test case checks for 0 raised to a negative number as it is a special case that should be undefined and
+returns infinity in java. The toPower fails to handle this special case and the test fails.
+
+    @Test
+    public void stringsAsInput(){
+        String[] str = {"one", "two", "three"}; 
+        Exception exception = assertThrows(NumberFormatException.class,() -> Smell1AlmostBest.main(str));
+        assertEquals(NumberFormatException.class, exception.getClass());
+    }
+
+This is a negative case as we are passing an invalid input in the form of a string to the main function. The logic of
+the code expects integer inputs. The main function throws an exception due to this. This test case is designed to 
+check if the main function throws a NumberFormatException or not.
+
+
+Equivalence class based tests : 
+    @Test
+    @DisplayName("Positive Number raised to a negative exponent")
+    public void positiveBaseNegativeExponent(){
+        int[] exponents = {-2,-3,-4};
+        int[] expectedVal = {(int) 0.25,(int) 0.125,(int) 0.0625};
+        int[] result = new int[expectedVal.length];
+        int base = 2;
+        for(int i =0;i<expectedVal.length;i++)
+        {
+            result[i] = power.toPower(base, exponents[i]);
+        }
+        assertArrayEquals(expectedVal,result);
+    }
+
+This is a special case that checks the output when a positive number is raised to a negative number.
+This is a valid scenario that returns decimals. The function does not take this scenario into consideration 
+and hence this test case fails.
+

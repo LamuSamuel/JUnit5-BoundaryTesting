@@ -7,13 +7,12 @@ public interface NewIPower {
     int toPower(int n, int pow);
 }
 
-class PowerSimple implements NewIPower {
+class NewPowerSimple implements NewIPower {
     @Override
     public int toPower(int n, int pow) {
         if (pow == 0){
             return 1;
         }
-           
         int res = 1;
         for (int i = 0; i < pow;i++){
             res = res *n;
@@ -22,7 +21,7 @@ class PowerSimple implements NewIPower {
     }
 }
 
-class PowerCached implements IPower {
+class NewPowerCached implements IPower {
     private static Map<Integer, Map<Integer, Integer>> __cache = new HashMap<Integer, Map<Integer, Integer>>();
 
     // resolves the inefficiency in AlmostBest

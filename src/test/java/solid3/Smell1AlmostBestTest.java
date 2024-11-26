@@ -36,9 +36,9 @@ class Smell1AlmostBestTest {
     @Test
     @DisplayName("Raising Zero to a negative number")
     public void baseZeroNegativeExponent(){
-        int expected = (int)Math.pow(0,-1);
+        int expected = (int)Math.pow(0,-2);
         int base = 0;
-        int[] exponents = {2,3,4};
+        int[] exponents = {-2,-2,-2};
 
         int[] expectedVal = {expected,expected,expected};
         int[] result = new int[expectedVal.length];
@@ -210,10 +210,6 @@ class Smell1AlmostBestTest {
 
     @Test
     public void stringsAsInput(){
-        ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
-        PrintStream outStream = new PrintStream(byteArray);
-        System.setOut(outStream);
-
         String[] str = {"one", "two", "three"};
         
         Exception exception = assertThrows(NumberFormatException.class,() -> Smell1AlmostBest.main(str));
