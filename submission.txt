@@ -1,22 +1,4 @@
-7206eba6ce1055c34b43f5fd6302a94a3870ad24 testing func PositiveBaseToPositivePower
-c5c7369470ef7cc187b01cf95363611b5f56d0c6 unit case two Positive base raised to Exponent Zero
-e1d5b15ad33faaa93aacc985c42773925737a738 unit test case three base one raised to larger value should return one
-53c24a6710460ac3799a3a55c50135803bf6c1c5  unit test cases for PositiveBaseToPositivePower PositiveBaseToExponentZero baseOneRaisesToGreaterPower
-fc649d9cab3425e840866ea8060bae2a5d7856fa  Negative base with odd exponent should return Negative result
-45edda818ee8207ae921244f7ca89c8abc32c00d  Negative base with zero exponent should return one
-
-
-
-
-jacoco
-
-6b71b9c58a0bfdc301d609e4c5a681e7b22b3002   generating the jacoco report part 1
-
-
-2b25d447e3e9f15075ebd90fc82892dfd306978f    enhancing the existing jacoco report to cover the main function and give accurate report jacoco report 2
-
-
-6ab6afe4659dbe1561c90061ac5b3f1f0301dbac     Fix ALL the smells reported by PMD part 2
+please refer to individual submissions
 
 
 
