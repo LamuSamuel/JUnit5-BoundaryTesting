@@ -151,5 +151,3 @@ Failure cases (Negative cases) are :
                 so any negative base (-2) raised to 2, 4, 6 should return 4,16,64.
 
 
-
-
