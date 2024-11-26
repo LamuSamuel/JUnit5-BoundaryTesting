@@ -210,10 +210,6 @@ class Smell1AlmostBestTest {
 
     @Test
     public void stringsAsInput(){
-        ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
-        PrintStream outStream = new PrintStream(byteArray);
-        System.setOut(outStream);
-
         String[] str = {"one", "two", "three"};
         
         Exception exception = assertThrows(NumberFormatException.class,() -> Smell1AlmostBest.main(str));
