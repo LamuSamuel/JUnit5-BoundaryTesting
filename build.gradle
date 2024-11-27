@@ -21,11 +21,11 @@ test {
 }
 
 jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
+//    dependsOn test // tests are required to run before generating the report
     reports {
         xml.required = false
         csv.required = false
-        html.outputLocation = file('part1_coverage')
+        html.outputLocation = file('part1_1b_coverage')
     }
 
     pmd{
