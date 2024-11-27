@@ -30,6 +30,8 @@ so added an enhanced logic to cover that part. this function is called as testMa
 
 2b25d447e3e9f15075ebd90fc82892dfd306978f    enhancing the existing jacoco report to cover the main function and give accurate report jacoco report 2
 
+38f65402e6695c00b85122002fb4bd3fbe11a379    enhancing the code to cover all the loops and branches to get 100% coverage report. i submitted my previous version with 96% before on the day before the deadline but Dr. Gary and shikha told me to get 100 percent report so , marking the latest commit.
+
 
 PART 2 Coding – Static Analysis
 
