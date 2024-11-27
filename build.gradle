@@ -25,7 +25,7 @@ jacocoTestReport {
     reports {
         xml.required = false
         csv.required = false
-        html.outputLocation = file('part2_coverage')
+        html.outputLocation = file('part1_1b_coverage')
     }
 
     pmd{
