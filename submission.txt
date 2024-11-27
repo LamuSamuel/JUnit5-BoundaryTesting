@@ -1,5 +1,39 @@
-please refer to individual submissions
+I collaborated with Darryl.for this lab for the part A , his asu id - dsalda11
+Nevertheless, this submission.txt is exclusively my work, and he has his own submission.txt.
+Refer The  remote Github repo for the collaboration : https://github.com/LamuSamuel/JUnit5-BoundaryTesting, i have also added (https://github.com/SER515asu as a collaborator so please accept invitation to recognize our efforts).
 
 
+task (a)
+Part 1 Testing
+Commit Hash                               What is this commit related to
 
 
+7206eba6ce1055c34b43f5fd6302a94a3870ad24  testing func PositiveBaseToPositivePower -
+c5c7369470ef7cc187b01cf95363611b5f56d0c6  unit case two Positive base raised to Exponent Zero - Date:
+e1d5b15ad33faaa93aacc985c42773925737a738  unit test case three base one raised to larger value should return one
+53c24a6710460ac3799a3a55c50135803bf6c1c5  unit test cases for PositiveBaseToPositivePower PositiveBaseToExponentZero baseOneRaisesToGreaterPower
+fc649d9cab3425e840866ea8060bae2a5d7856fa  Negative base with odd exponent should return Negative result
+45edda818ee8207ae921244f7ca89c8abc32c00d  Negative base with zero exponent should return one
+07d7b92d390124c2ed1fa1db1ca53269b871f862  Negative base with negative exponent should return undefined
+1243d4276d3d03d819e2bd606a7e70c802d5be97  More test cases
+
+Final commit Part A 06bd322ae4414d90b21d58daad1f746b44d6f891 from Local to Github Repo.
+
+task (b)
+Part 1 - B  ------------------------------------------------ jacoco-report
+Commit Hash                                 What is it about?
+
+6b71b9c58a0bfdc301d609e4c5a681e7b22b3002   generating the jacoco report part 1
+
+//The initial jacoco didnt concentrate on the main function but it concentrated the topowerclass so after view the test report 1 and realising the report missed main function ,
+so added an enhanced logic to cover that part. this function is called as testMainWithValidArgs() in my unitest case.//
+
+2b25d447e3e9f15075ebd90fc82892dfd306978f    enhancing the existing jacoco report to cover the main function and give accurate report jacoco report 2
+
+
+PART 2 Coding – Static Analysis
+
+
+Commit Hash                                 What is it about?
+
+6ab6afe4659dbe1561c90061ac5b3f1f0301dbac     Fix ALL the smells reported by PMD part 2

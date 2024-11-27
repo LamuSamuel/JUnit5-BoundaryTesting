@@ -11,8 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-
-
 class Smell1AlmostBestTest {
 
     Smell1AlmostBest power  = new Smell1AlmostBest();
@@ -206,6 +204,18 @@ class Smell1AlmostBestTest {
         assertTrue(output.contains("The 4th power of 2 is 16"));
         assertTrue(output.contains("The 5th power of 2 is 32"));
         assertTrue(output.contains("Completed 4 iterations"));
+    }
+
+    @Test
+    @DisplayName("Test Main Method with Less than 2 Arguments")
+    void testMainWithLessThanTwoArgs() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        String[] args = {"1"};
+        Smell1AlmostBest.main(args);
+
+        String output = outContent.toString();
+        assertTrue(output.contains("Usage: java ser515.smells.Smell1AlmostBest <num> <pow>+"));
     }
 
     @Test
